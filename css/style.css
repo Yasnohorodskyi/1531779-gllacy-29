@@ -72,5 +72,63 @@
 .page-body  {
     font-family: Roboto;
     font-style: normal;
-    color:  var(--basic-black);
+    color:  var(--basic-white);
+    background-color: var(--main-page-first);
+}
+.page-body a{
+    color:var(--basic-white);
+    text-decoration: none;
+}
+.main-nav-item  {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+}
+.sec-nav-list li {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+.header-tel-txt {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+}
+.header-tel-lnk {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 24px;
+}
+.main-banner-name   {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px; /* or 100% */
+    text-align: center;
+}
+.main-button    {
+    background-color: var(--button-gradient);
+    font-weight: bold;
+}
+.main-button:hover    {
+    background-color: var(--button-hover-gradient);
+    font-weight: bold;
+}
+.main-button:focus    {
+    background-color: var(--button-press-gradient);
+    font-weight: bold;
+}
+.banner-button {
+    box-shadow:  0px 2px 2px var(--button-main-banner-shadow);
+    border-radius: 50px;
+    font-size: 32px;
+    line-height: 44px;
+    text-shadow: 0px 2px 5px var(--button-txtshadow);
+    align-items: center;
+    letter-spacing: 0.05em;
+}
+.banner-button:hover    {
+    box-shadow:  0px 2px 2px var(--button-hover-shadow);
+}
+.banner-button:focus    {
+    box-shadow:  0px 2px 2px var(--button-press-shadow);
 }
