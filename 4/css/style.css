@@ -34,7 +34,7 @@
     --button-gradient: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
     --button-txtshadow:rgba(160, 32, 11, 0.76);
     --button-main-banner-shadow:rgba(172, 16, 0, 0.64);
-    --button-button-shadow:rgba(85, 8, 0, 0.54);
+    --button-sec-shadow:rgba(85, 8, 0, 0.54);
     --button-hover-gradient:linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
     --button-hover-shadow:#AC1000; /*also .catalog-button shadow*/
     --button-press-gradient:linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);;
@@ -64,6 +64,7 @@
 
     --catalog-filter-slider-dot-fill:#ABABAB;
     --catalog-priceshadow:rgba(49, 50, 53, 0.5);
+    --spam-name:#5A5A5A;
 
     --cart:#E84D37;
     --cart-separator:#CACAC7;
@@ -72,5 +73,292 @@
 .page-body  {
     font-family: Roboto;
     font-style: normal;
-    color:  var(--basic-black);
+    font-weight: bold;
+    color:  var(--basic-white);
+    background-color: var(--main-page-first);
 }
+
+.page-body li{
+    list-style: none;
+}
+
+                    /*Navigation*/
+
+.header-nav a {
+    color:var(--basic-white);
+}
+
+.main-nav-item {
+    font-size: 16px;
+    line-height: 18px;    
+}
+.sec-nav-list li {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+.header-tel-txt {
+    
+    font-size: 14px;
+    line-height: 16px;
+}
+.header-tel-lnk {
+    
+    font-size: 22px;
+    line-height: 24px;
+    color:var(--basic-white);
+    text-decoration:none;
+}
+
+                     /*Main banner*/
+
+.main-banner-name   {
+    
+    font-size: 60px;
+    line-height: 60px; /* or 100% */
+    text-align: center;
+}
+
+.main-banner-img{
+    background: var(--img-bg);
+}
+
+                    /*Buttons*/
+
+.main-button    {
+    background: var(--button-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--basic-white);
+    text-decoration:none;
+}
+.main-button:hover    {
+    background: var(--button-hover-gradient);
+}
+.main-button:focus    {
+    background: var(--button-press-gradient);
+}
+.banner-button {
+    width: 279px;
+    height: 63px;
+    box-shadow:  0px 2px 2px var(--button-main-banner-shadow);
+    border-radius: 50px;
+    font-size: 32px;
+    line-height: 44px;
+    text-shadow: 0px 2px 5px var(--button-txtshadow);
+    letter-spacing: 0.05em;
+    
+}
+.banner-button:hover    {
+    box-shadow:  0px 2px 2px var(--button-hover-shadow);
+}
+.banner-button:focus    {
+    box-shadow: inset 0px 2px 2px var(--button-press-shadow);
+}
+
+.special-button {
+    width: 164px;
+    height: 46px;
+}
+
+.spam-button    {
+    width: 130px;
+    height: 44px;  
+}
+
+.feedback-button    {
+    width: 253px;
+    height: 43px;
+}
+
+
+.special-button,
+.spam-button,
+.feedback-button {
+    box-shadow:  0px 2px 2px var(--button-sec-shadow);
+    border-radius: 26px;
+    font-size: 18px;
+    line-height: 20px;
+    border: none;
+    color:var(--basic-white);
+
+}
+.special-button:hover,
+.spam-button:hover,
+.feedback-button:hover    {
+    box-shadow:  0px 1px 2px var(--button-hover-shadow);
+}
+.special-button:focus,
+.spam-button:focus,
+.feedback-button:focus    {
+    box-shadow: inset 0px 2px 2px var(--button-press-shadow);    
+    outline: none;
+}
+
+                    /*Special offers*/
+
+.special-offer-element  {
+    background: var(--img-bg);
+}
+.special-offer-name {
+    
+    font-size: 35px;
+    line-height: 41px;
+}
+.special-offer-txt{
+    
+    font-size: 18px;
+    line-height: 22px;
+}
+
+                    /*Catalog*/
+
+.catalog-item-img   {
+    background: var(--img-bg);
+}
+
+.catalog-item-price {
+    font-size: 45px;
+    line-height: 45px; 
+    /* or 100% */
+    text-shadow: 0px 1px 3px var(--catalog-priceshadow);
+    display: flex;
+    align-items: center;
+}
+
+.catalog-item-price span    {
+    font-size: 45px;
+    line-height: 45px;/* or 117% */
+}
+
+.catalog-item-name  {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 137% */
+    text-align: center;
+    color:var(--basic-white);
+}
+
+                    /*Features*/
+
+.main-feature-section   {
+    color:var(--basic-black);
+}
+
+.feature-name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px; /* or 125% */
+}
+
+.feature-item{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 137% */
+    display: flex;
+    align-items: center;
+}
+
+.main-feature-section   {
+    background: var(--basic-white);
+}
+
+
+                    /*Main articles*/
+
+.main-articles,
+.main-articles a  {
+    color:var(--basic-black);    
+    display: flex;
+    align-items: center;
+}
+
+.articles-new   {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 137% */
+}
+
+.articles-new-name  {
+    
+    font-size: 24px;
+    line-height: 30px;
+    /* or 125% */
+}
+
+                    /*Spam*/
+
+.main-articles{
+    background: var(--basic-white);
+}
+
+.main-spam-section  {
+    background: var(--basic-white);
+}
+.spam-name  {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 137% */
+    display: flex;
+    align-items: center;
+    color: var(--spam-name);
+}
+
+                    /*Map*/
+
+.map-img    {
+    background: var(--img-bg);
+}
+
+.map-contacts-txt   {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */    
+    color:var(--basic-black);
+    display: flex;
+    align-items: center;
+}
+.map-contacts-txt span,
+.map-contacts-txt a  {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    /* or 133% */
+    color:var(--basic-black);
+    display: flex;
+    align-items: center;
+    text-decoration:none;
+}
+
+                    /*Footer*/
+
+.footer-docs-lnk {
+    color:var(--basic-white);
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    /* or 138% */
+    display: flex;
+    align-items: center;
+}
+.supply {
+    font-weight: bold;
+}
+
+.footer-made-name,
+.footer-made-lnk{
+    color:var(--basic-white);
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    /* or 150% */
+    display: flex;
+    align-items: center;
+}
+
