@@ -43,13 +43,13 @@
 
     /*Main banner colors*/
 
-    --main-banner-blur-first: rgba(239, 224, 218, 0.75);
-    --main-banner-blur-second: rgba(218, 228, 239, 0.75);
-    --main-banner-blur-third: rgba(215, 242, 227, 0.75);
+    --banner-blur-first: rgba(239, 224, 218, 0.75);
+    --banner-blur-second: rgba(218, 228, 239, 0.75);
+    --banner-blur-third: rgba(215, 242, 227, 0.75);
     --main-page-first: #9D8B84;
     --main-page-second: #8996A6;
     --main-page-third: #849D8F;
-    --main-banner-slider-dot-hover:rgba(255, 255, 255, 0.4);
+    --banner-slider-dot-hover:rgba(255, 255, 255, 0.4);
 
     /*Special colors*/
 
@@ -112,20 +112,20 @@
 
                      /*Main banner*/
 
-.main-banner-name   {
+.banner-name   {
     
     font-size: 60px;
     line-height: 60px; /* or 100% */
     text-align: center;
 }
 
-.main-banner-img{
+.banner-img{
     background: var(--img-bg);
 }
 
                     /*Buttons*/
 
-.main-button    {
+.button    {
     background: var(--button-gradient);
     display: flex;
     align-items: center;
@@ -133,10 +133,10 @@
     color:var(--basic-white);
     text-decoration:none;
 }
-.main-button:hover    {
+.button:hover    {
     background: var(--button-hover-gradient);
 }
-.main-button:focus    {
+.button:focus    {
     background: var(--button-press-gradient);
 }
 .banner-button {
