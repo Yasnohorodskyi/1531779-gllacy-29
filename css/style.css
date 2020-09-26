@@ -88,12 +88,8 @@
 .map-contacts-tel:focus{
     color:var(--link-whitebg-hover-press);
 }
-.page-footer a:hover,
-.page-footer a:focus{
-    color:var(--link-nobg-hover-press);
-}
-.page-main a:hover:not(.button):not(.pages-lnk):not(.articles-new-name):not(.map-contacts-tel),
-.page-main a:focus:not(.button):not(.pages-lnk):not(.articles-new-name):not(.map-contacts-tel){
+.lnk-no-bg:hover,
+.lnk-no-bg:focus {
     color:var(--link-nobg-hover-press);
 }
                     /*Navigation*/
@@ -154,7 +150,8 @@
 border-radius: 50%;
 }
 
-.sec-nav-list li:hover  {
+.sec-nav-list li:hover,
+.sec-nav-list a:hover {
     color:  var(--basic-black);
     box-shadow:inset 0px 0px 0px 16px var(--basic-white);
 }
@@ -336,7 +333,11 @@ border-radius: 50%;
 .bread-item  {
     font-weight: normal;
     font-size: 14px;
-    line-height: 16px;    
+    line-height: 16px;
+}
+
+.bread-item-lnk  {
+    color:var(--basic-white);
 }
 
 .main-header {
