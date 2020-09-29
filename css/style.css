@@ -78,7 +78,15 @@
     background-color: var(--main-page-first);
 }
 
-.page-body li   {
+.page-header li   {
+    list-style: none;
+}
+
+.page-main li {
+    list-style: none;
+}
+
+.page-footer li {
     list-style: none;
 }
 
