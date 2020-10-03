@@ -178,9 +178,46 @@ border-radius: 50%;
     text-align: center;
 }
 
-.banner-img{
-    background: var(--img-bg);
+.banner-bg    {
+    position: relative;
+    z-index:-1;
+    width:716px;
+    height:716px;
+    filter: blur(250px);
 }
+
+.banner-bg.first    {
+    background:var(--banner-blur-first);
+}
+
+.banner-bg.second    {
+    background:var(--banner-blur-second);
+}
+
+.banner-bg.third    {
+    background:var(--banner-blur-third);
+}
+
+.banner-wrapper {
+    position:relative;
+    top:-716px;
+}
+.banner-item    {
+    margin-bottom: -716px;
+}
+
+.banner-img {
+    position: relative;
+    z-index: 2;
+}
+
+.sec-banner-img {
+    position: relative;
+    left:-62px;
+    z-index: 1;
+}
+
+
 
                     /*Buttons*/
 
@@ -287,24 +324,34 @@ border-radius: 50%;
 
                     /*Special offers*/
 
-.special-offer-element  {
-    background: var(--img-bg);
-}
 .special-offer-name {
-    
     font-size: 35px;
     line-height: 41px;
+    margin:20px;
 }
 .special-offer-txt{
-    
     font-size: 18px;
     line-height: 22px;
+    margin:20px;
+}
+.special-offer-element  {
+    width:560px;
+    height:229px;
+    border-radius: 16px;
+}
+
+.special-offer-element.first  {
+    background:url(../img/bg/raspberry.jpg);
+}
+.special-offer-element.second  {
+    background:url(../img/bg/chocko.jpg);
 }
 
                     /*Catalog*/
 
 .catalog-item-img   {
     background: var(--img-bg);
+    border-radius:60%;
 }
 
 .catalog-item-price {
@@ -372,7 +419,13 @@ border-radius: 50%;
                     /*Features*/
 
 .main-feature-section   {
+    display: block;
+    width: 1146px;
+    height: 306px;
     color:var(--basic-black);
+    background: url(../img/bg/waffle.jpg);
+    border-radius: 16px;
+    padding:10px;
 }
 
 .feature-name {
@@ -388,10 +441,6 @@ border-radius: 50%;
     /* or 137% */
     display: flex;
     align-items: center;
-}
-
-.main-feature-section   {
-    background: var(--basic-white);
 }
 
 
