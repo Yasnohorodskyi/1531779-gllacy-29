@@ -467,15 +467,35 @@ border-radius: 50%;
     /* or 125% */
 }
 
+.main-articles{
+    width:560px;
+    height:220px;
+    border-radius: 16px;
+    background: var(--basic-white);
+    background: url(../img/bg/strawberry.jpg);
+}
+
                     /*Spam*/
 
-.main-articles{
-    background: var(--basic-white);
-}
+
 
 .main-spam-section  {
     background: var(--basic-white);
+    background-image:url(../img/bg/postbg.png);
+    width:560px;
+    height:220px;
+    border-radius: 16px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
+.spam-wrapper   {
+    background: var(--form-window-bg);
+    width:548px;
+    height:210px;
+    border-radius: 16px;
+}
+
 .spam-name  {
     font-weight: normal;
     font-size: 16px;
@@ -490,6 +510,11 @@ border-radius: 50%;
 
 .map-img    {
     background: var(--img-bg);
+}
+.main-map-section  {
+    width:1200px;
+    height:430px;
+    background:url(../img/map/map.png);
 }
 
 .map-contacts-txt   {
