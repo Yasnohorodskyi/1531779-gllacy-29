@@ -145,6 +145,7 @@
     align-items: center;
     justify-content: center;    
     background-color:var(--transparent-elements-fill);
+    cursor:pointer;
 }
 
 
@@ -160,12 +161,12 @@
     height:32px;
     padding: 5px;
     border-radius: 50%;
-    background:url(../img/sec-nav/search.svg) center center no-repeat;
+    background:url(../img/sec_nav/search.svg) center center no-repeat;
 }
 
 .search:hover,
 .search:focus {
-    background:var(--basic-white) url(../img/sec-nav/search-black.svg) center center no-repeat;    
+    background:var(--basic-white) url(../img/sec_nav/search_black.svg) center center no-repeat;    
 }
 
 .login  {
@@ -178,12 +179,12 @@
     display:flex;
     width:20px;
     height:19px;
-    background-image:url(../img/sec-nav/login.svg);
+    background-image:url(../img/sec_nav/login.svg);
 }
 
 .login:hover::before,
 .login:focus::before  {
-    background-image:url(../img/sec-nav/login-black.svg);
+    background-image:url(../img/sec_nav/login_black.svg);
 }
 
 .cart  {
@@ -196,23 +197,17 @@
     display:flex;
     width:21px;
     height:20px;
-    background-image:url(../img/sec-nav/cart.svg);
+    background-image:url(../img/sec_nav/cart.svg);
 }
 
 .cart:hover::before,
 .cart:focus::before  {
-    background-image:url(../img/sec-nav/cart-black.svg);
+    background-image:url(../img/sec_nav/cart_black.svg);
 }
 
 .cart a {
     text-decoration: none;
 }
-
-/* .sec-nav-list .cart:hover,
-.cart:hover a {
-    color:  var(--basic-black);
-    background-color:var(--basic-white);
-} */
 
 .cart.not-empty,
 .cart.not-empty a {
@@ -222,11 +217,11 @@
 
 .cart.not-empty::before {
     margin-right:8px;
-    content:url(../img/sec-nav/cart-black.svg);
+    content:url(../img/sec_nav/cart_black.svg);
     display:flex;
     width:21px;
     height:20px;
-    background:url(../img/sec-nav/cart-orange.svg) right 1.9px top 4px no-repeat;
+    background:url(../img/sec_nav/cart_orange.svg) right 1.9px top 4px no-repeat;
 }
 
 .header-tel-txt {
@@ -424,8 +419,24 @@
                     /*Catalog*/
 
 .catalog-item-img   {
+    width:267px;
+    height:267px;
+    box-sizing: border-box;
     background: var(--img-bg);
-    border-radius:60%;
+    border-radius:50%;
+}
+
+.catalog-item.hit::before   {
+    content:url(../img/decorative/hit.svg);
+    position: absolute;
+    width:61px;
+    height:61px;
+    border-radius:50%;
+    background-color: #FFFFFF;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .catalog-item-price {
@@ -707,7 +718,7 @@
 }
 
 .supply::before {
-    content:url(../img/heart.svg);
+    content:url(../img/decorative/heart.svg);
 }
 
 .footer-made-name,
