@@ -578,7 +578,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width:1146px;
-    position: relative;
 
 }
 
@@ -586,6 +585,8 @@
     outline:2px solid burlywood;
     width:267px;
     text-align: center;
+    
+    position: relative;
     
 }
 
