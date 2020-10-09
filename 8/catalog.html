@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <base href="https://htmlacademy-htmlcss.github.io/1531779-gllacy-29/8/">
+</head>
+  <body  class="page-body">
+    <header class="page-header">
+      <nav class="header-nav">
+        <a class="nav-logo" href="index.html">
+          <img class="nav-logo-img" src="img/logo/logo.svg" width="154" height="64" alt="Логотип Глейси">
+        </a>
+        <ul class="main-nav-list list-style-none">
+          <li class="main-nav-item nav-catalog-info"><a class="main-nav-lnk catalog active-page">Каталог</a>
+          <!--  <ul>
+              <li><a href="blank.html"><b>Новинки</b></a></li>
+              <li><a href="catalog.html">Сливочное</a></li>
+              <li><a href="blank.html">Щербеты</a></li>
+              <li><a href="blank.html">Фруктовый лед</a></li>
+              <li><a href="blank.html">Мелорин</a></li>
+            </ul>-->
+          </li>
+          <li class="main-nav-item nav-pay-info"><a class="main-nav-lnk pay" href="blank.html">Доставка и оплата</a></li>
+          <li class="main-nav-item nav-company-info"><a class="main-nav-lnk info" href="blank.html">О компании</a></li>
+        </ul>
+        <ul class="sec-nav-list list-style-none">
+          <li class="search">
+            <svg class="search-img" width="16" height="16" viewBox="0 0 16 16" fill="var(--basic-white)" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z"/>
+            </svg>
+          </li>
+          <li class="login">
+            <svg class="login-img" width="20" height="19" viewBox="0 0 20 19" fill="var(--basic-white)" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z"/>
+              <path d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"/>
+            </svg>
+            Вход
+            <!--
+            <div>
+              <p>Форма входа</p>
+              <p>Логин</p>
+              <p>Пароль</p>
+              <button type="submit">Войти</button>
+              <a href="blank.hmtl">Забыли пароль?</a>
+              <a href="blank.html">Новая регистрация</a>
+            </div>
+            -->
+          </li>
+          <li class="cart not-empty">
+            <a class="cart-lnk" href="blank.html">
+              <svg class="cart-img" width="21" height="20" viewBox="0 0 21 20" fill="var(--basic-white)" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"/>
+                <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z"/>
+                <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z"/>
+              </svg>
+              2 товара
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-tel">
+        <p class="header-tel-txt">с 10 до 20, ежедневно
+        <a class="header-tel-lnk" href="tel:+78124502525">8 812 450-25-25</a></p>
+      </div>
+    </header>
+    <main class="page-main catalog">
+        <ul class="bread-list list-style-none">
+          <li class="bread-item">
+            <a class="bread-item-lnk lnk-no-bg" href="index.html">Главная</a>
+          </li>
+          <li class="bread-item">
+            <a class="bread-item-lnk lnk-no-bg" href="index.html">Каталог</a>
+          </li>
+          <li class="bread-item">
+            Сливочное
+          </li>
+        </ul>
+        <h1 class="main-header">Сливочное мороженое</h1>
+        <section class="filter-section">
+          <h2>Фильтр товаров</h2>
+          <button class="filter-button" type="submit">Применить</button>
+        </section>
+        <section class="catalog-list-section">
+          <ul class="catalog-list list-style-none">
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/hit1.jpg" width="267" height="267" alt="Фото Cливочное с апельсиновым джемом и цитрусовой стружкой">
+              <p class="catalog-item-price">310 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/hit2.jpg" width="267" height="267" alt="Фото Cливочно-кофейное с кусочками шоколада">
+              <p class="catalog-item-price">380 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочно-кофейное с кусочками шоколада</a>
+              <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/hit3.jpg" width="267" height="267" alt="Фото Cливочно-клубничное с присыпкой из белого шоколада">
+              <p class="catalog-item-price">355 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+              <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/hit4.jpg" width="267" height="267" alt="Фото Cливочное крем-брюле с карамельной подливкой">
+              <p class="catalog-item-price">415 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочное крем-брюле с карамельной подливкой</a>
+              <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/foto1.jpg" width="267" height="267" alt="Фото Сливочное с брусничным джемом">
+              <p class="catalog-item-price">325 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочное с брусничным джемом</a>
+            <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/foto2.jpg" width="267" height="267" alt="Фото Сливочно-черничное с цельными ягодами черники">
+              <p class="catalog-item-price">410 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочно-черничное с цельными ягодами черники</a>
+              <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/foto3.jpg" width="267" height="267" alt="Фото Сливочно-лимонное с карамельной присыпкой">
+              <p class="catalog-item-price">315 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочно-лимонное с карамельной присыпкой</a>
+              <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/foto4.jpg" width="267" height="267" alt="Фото Сливочное с шоколадной стружкой">
+              <p class="catalog-item-price">320 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочное с шоколадной стружкой</a>
+              <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/foto5.jpg" width="267" height="267" alt="Фото Сливочно-ванильное с кусочками шоколада">
+              <p class="catalog-item-price">440 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочно-ванильное с кусочками шоколада</a>
+              <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/foto6.jpg" width="267" height="267" alt="Фото Сливочноe с ментоловым сиропом">
+              <p class="catalog-item-price">435 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочноe с ментоловым сиропом</a>
+              <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/foto7.jpg" width="267" height="267" alt="Фото Сливочное с кусочками черного шоколада">
+              <p class="catalog-item-price">355 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочное с кусочками черного шоколада</a>
+              <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-img" src="img/catalog/foto8.jpg" width="267" height="267" alt="Фото Сливочное с мятным сиропом">
+              <p class="catalog-item-price">420 &#8381<span>/кг</span></p>
+              <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочное с мятным сиропом</a>
+              <!--<a class="button catalog-button" href="blank.html">Быстрый просмотр</a>-->
+            </li>
+            </ul>
+            <ul class="pages-list list-style-none">
+              <li class="pages-item">
+                <a class="pages-lnk active-page">1</a>
+              </li>
+              <li class="pages-item">
+                <a class="pages-lnk" href="blank.html">2</a>
+              </li>
+              <li class="pages-item">
+                <a class="pages-lnk" href="blank.html">3</a>
+              </li>
+              <li class="pages-item">
+                <a class="pages-lnk" href="blank.html">4</a>
+              </li>
+              <li class="pages-item">
+                <a class="pages-lnk" href="blank.html">5</a>
+              </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="page-footer">
+      <section class="footer-social-section">
+        <ul class="footer-social-list list-style-none">
+          <li class="footer-social-item">
+            <a class="footer-social-lnk" href="#"><img class="footer-social-img fbk" src="img/social/fb.svg" width="32" height="32" alt="Facebook"></a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-lnk" href="#"><img class="footer-social-img vk" src="img/social/vk.svg" width="32" height="32" alt="Вконтакте"></a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-lnk" href="#"><img class="footer-social-img inst" src="img/social/inst.svg" width="32" height="32" alt="Instagram"></a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-lnk" href="#"><img class="footer-social-img twt" src="img/social/twtr.svg" width="32" height="32" alt="Twitter"></a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer-docs">
+        <ul class="footer-docs-list list-style-none">
+          <li class="footer-docs-item">
+            <a class="footer-docs-lnk lnk-no-bg supply" href="blank.html">Для поставщиков</a>
+          </li>
+          <li class="footer-docs-item">
+            <a class="footer-docs-lnk lnk-no-bg product" href="blank.html">О производстве</a>
+          </li>
+           <li class="footer-docs-item">
+            <a class="footer-docs-lnk lnk-no-bg docs" href="blank.html">Наши документы</a>
+           </li>
+           <li class="footer-docs-item">
+            <a class="footer-docs-lnk lnk-no-bg eko" href="blank.html">Экологические стандарты</a>
+           </li>
+        </ul>
+      </section>
+        <a class="footer-made-logo-lnk" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img class="footer-made-img" src="img/logo/html_logo.svg" width="108" height="39" alt="Лого htmlacademy"></a>
+        <p  class="footer-made-name">Сделано в&nbsp;<a class="footer-made-lnk lnk-no-bg" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>&nbsp;© 2019</p>
+    </footer>
+      
+    </body>
+  </html>
