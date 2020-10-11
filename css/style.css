@@ -129,6 +129,7 @@
     outline: 1px solid red;
     margin:  0px;
     padding: 0px;
+    margin-left:24px;
 }
 
 .main-nav-item  {
@@ -139,10 +140,6 @@
     padding: 0px; 
     outline: 1px solid black;
     cursor: pointer;
-}
-
-.main-nav-item:first-of-type   {
-    margin-left:24px;
 }
 
 .main-nav-item:not(:last-of-type)   {
@@ -156,10 +153,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration-line: underline;
     padding-left:13px;
     padding-right:13px;
     color:  var(--basic-white);
-    text-decoration: none;
     font-size: 16px;
     line-height: 18px;
 }
@@ -192,6 +189,7 @@
     outline: 1px solid yellow;
     margin: 0px;
     padding: 0px;
+    margin-right:27px;
 }
 
 .sec-nav-list li {
@@ -211,13 +209,10 @@
     padding:0px 16px;
 }
 
-.sec-nav-list li   {
+.sec-nav-list li:not(:last-of-type)   {
     margin-right:10px;
 }
 
-.sec-nav-list li:last-of-type    {
-    margin-right:27px;
-}
 
 .search {
     padding:0px;
@@ -231,7 +226,7 @@
 }
 
 .search .search-img {
-    position: absolute;
+    position: relative;
 }
 
 .search:hover .search-img,
@@ -350,14 +345,17 @@
 
 .banner-list    {
     outline:  2px solid yellowgreen;
-    margin:0;
+    margin:0px;
     margin-top:-123px;
-    padding:0;
+    padding:0px;
 }
 
 .banner-item    {
+    margin:0px;
+    padding:0px;
     outline: 2px solid tan;
     position: relative;
+    top:-716px;
     height:716px;
     width:716px;  
     margin:auto;
@@ -366,7 +364,7 @@
 .banner-item.first::before    {  
     display: block;
     content:"";
-    position: absolute;
+    position: relative;
     height:716px;
     width:716px;  
     background:var(--banner-blur-first);
@@ -377,7 +375,7 @@
 .banner-item.second::before    {  
     display: block;
     content:"";
-    position: absolute;
+    position: relative;
     height:716px;
     width:716px;  
     background:var(--banner-blur-second);    
@@ -388,7 +386,7 @@
 .banner-item.third::before    {  
     display: block;
     content:"";
-    position: absolute;
+    position: relative;
     height:716px;
     width:716px;  
     background:var(--banner-blur-third);
@@ -397,48 +395,59 @@
 }
 
 .banner-img {
-    position: absolute;
+    position: relative;
     width:367px;
     height:582px;
     top:83px;
-    left:34px;
+    left:35px;
     z-index: 2;
+    outline:2px solid orangered;
 }
 
 .sec-banner-img {
-    position: absolute;
+    position: relative;
     width:333px;
     height:523px;
-    top:123px;
-    left:349px;
+    top:61px;
+    left:-23px;
     z-index: 1;
+    
+    outline:2px solid orange;
 }
 
 .banner-name   {
     margin:0;
-    position: absolute;
-    top:398px;
+    position: relative;
+    top:-184px;
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    width:672px;
-    height:120px;
     font-size: 60px;
     line-height: 60px; /* or 100% */
     text-align: center;
     z-index: 3;
     outline: 2px solid grey;
+    
 }
 
 .banner-item:first-child .banner-name  {
     width:648px;
 }
 
+.banner-item:nth-child(2) .banner-name  {
+    width:672px;
+}
+
+.banner-item:nth-child(3) .banner-name  {
+    width:672px;
+}
+
 .banner-button {
     margin:0px;
     padding:0px;
-    position: absolute;
+    position: relative;
+    top:-158px;
     left:219px;
     bottom:110px;
     z-index:4;
@@ -479,8 +488,9 @@
 
 
 .special-button {
-    width: 164px;
-    height: 46px;
+    height: 48px;
+    width:max-content;
+    padding:0px 22px;
 }
 
 .spam-button    {
@@ -519,12 +529,8 @@
 
 .filter-button  {
     color: var(--basic-white);
-    /*position: absolute;
-    left: 752px;
-    top: 281px;*/
     width: 144px;
     height: 36px;
-    
     background: var(--transparent-elements-fill);
     border: 2px solid var(--basic-white);
     box-sizing: border-box;
@@ -551,16 +557,18 @@
 
 .special-offer-section  {
     display: grid;
-    grid-template-columns:560px 560px;
+    grid-template-columns:1fr 1fr;
     grid-gap:26px;
+    margin:0px 27px;
     margin-top:-69px;
     outline:2px solid blueviolet;
 }
 
-.special-button {
-    position: absolute;
-    right:22px;
-    bottom:22px;
+.special-button-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 22px;
+    margin-top:42px;
 }
 
 .special-offer-name {
@@ -578,7 +586,6 @@
     z-index: 5;
     width:560px;
     height:229px;
-    margin-left:27px;
     border-radius: 16px;
     outline:2px solid brown;
 }
@@ -598,7 +605,6 @@
     margin: 40px auto 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     width:1146px;
 
 }
@@ -607,9 +613,12 @@
     outline:2px solid burlywood;
     width:267px;
     text-align: center;
-    
+    margin-right:26px;
     position: relative;
     
+}
+.catalog-item:nth-child(4n) {
+    margin-right:0px;
 }
 
 .catalog-item-img   {
@@ -635,8 +644,8 @@
 
 .catalog-item-price {
     margin: 0px;
-    position: absolute;
-    top:216px;
+    position: relative;
+    top:-100px;
     font-size: 45px;
     line-height: 45px; 
     /* or 100% */
@@ -931,7 +940,7 @@
 }
 
 .map-position   {
-    position: absolute;
+    position: relative;
     top:136px;
     left:270px;
     outline: 3px solid rebeccapurple;
@@ -973,36 +982,41 @@
 }
 
 .map-contacts-container {
-    position: absolute;
+    position: relative;
     left:870px;
-    top:62px;
+    top:-74px;
     width:303px;
     height:306px;
     background:var(--form-feedback--bg);
     border-radius:16px;
     box-sizing: border-box;
-    
+    outline: 2px solid peru;
     padding:32px 25px 31px 25px;
 }
 
                     /*Footer*/
 
 .page-footer    {
+    margin:36px auto 0px auto;    
     width: 1200px;
     height:103px;
-    margin:0 auto;
+    outline: 3px solid blue;
+}
+
+.footer-wrapper    {
+    margin-right: 27px;
+    margin-left: 29px;
     display: grid;
     grid-template-columns: max-content 1fr max-content;
-
 }
 
 
 .footer-social-list {
     outline: 3px solid indianred;
     padding:0px;
-    margin:36px 0px 0px 29px;
     display:flex;
     gap:12px;
+    margin:0px;
 }
 
 .footer-social-img  {
@@ -1020,7 +1034,7 @@
 
 .footer-docs-list   {
     padding: 0px;
-    margin: 36px auto 0px auto;
+    margin: 0px auto;
     display: grid;
     grid-template-columns: max-content max-content;
     grid-template-rows: max-content max-content;
@@ -1061,8 +1075,7 @@
 
 .footer-made-wrapper    {
     outline: 3px solid navy;
-    margin-top:18px;
-    margin-right: 27px;
+    margin-top:-18px;
 }
 
 .footer-made-name,
