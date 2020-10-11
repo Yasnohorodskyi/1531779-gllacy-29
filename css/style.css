@@ -622,6 +622,7 @@
 }
 
 .catalog-item-img   {
+    margin:0px;
     width:267px;
     height:267px;
     box-sizing: border-box;
@@ -644,23 +645,28 @@
 
 .catalog-item-price {
     margin: 0px;
-    position: relative;
-    top:-100px;
+    padding:    0px;
     font-size: 45px;
     line-height: 45px; 
     /* or 100% */
+    position: relative;
+    margin-top: -61px;
+    margin-bottom: 27px; 
     text-shadow: 0px 1px 3px var(--catalog-priceshadow);
     display: flex;
     align-items: center;
 }
 
 .catalog-item-price span    {
+    margin: 0px;
+    padding:    0px;
     font-size: 45px;
     line-height: 45px;/* or 117% */
 }
 
 .catalog-item-name  {
-    position: relative;
+    margin:0px;
+    padding: 0px;
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
@@ -669,10 +675,35 @@
     color:var(--basic-white);
 }
 
+.bread-list {
+    display:flex;
+    flex-wrap: wrap;
+    gap:8px;
+    margin:0px;
+    padding: 0px;
+    margin-left: 27px;
+    margin-top: -22px;
+    position: relative;
+    z-index: 7;
+    outline: pink 2px solid;
+    width:max-content;
+    max-width: 950px;
+}
+
 .bread-item  {
+    margin:0px;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
+}
+
+/* .bread-item:not(:last-child)    {
+    margin-right: 22px;
+} */
+
+.bread-item:not(:first-child)::before {
+    content:url(../img/decorative/bread.svg);
+    margin-right:6px;
 }
 
 .bread-item-lnk  {
