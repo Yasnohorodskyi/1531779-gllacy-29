@@ -213,21 +213,24 @@
     margin-right:10px;
 }
 
+.svg-search {
+outline: 2px solid red;
+}
 
 .search {
     padding:0px;
     margin:0px;
+    width:32px;
+    height:32px; 
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width:32px;
-    height:32px;
-    border-radius: 50%;
 }
 
-.search .search-img {
-    position: relative;
-}
+ .search .search-img {
+    position: absolute;
+} 
 
 .search:hover .search-img,
 .search:focus .search-img{
@@ -299,7 +302,7 @@
     display:flex;
     width:21px;
     height:20px;
-    background:url(../img/sec_nav/cart_orange.svg) right 2.5px top 9px no-repeat;
+    background:url(../img/sec_nav/cart-orange.svg) right 2.5px top 9px no-repeat;
 }
 
 .header-tel {
@@ -597,12 +600,59 @@
     background:url(../img/bg/chocko.jpg);
 }
 
+                       /* BREADCRUMBS */
+
+.bread-list {
+    display:flex;
+    flex-wrap: wrap;
+    gap:8px;
+    margin:0px;
+    padding: 0px;
+    margin-left: 27px;
+    margin-top: -22px;
+    position: relative;
+    z-index: 7;
+    outline: pink 2px solid;
+    width:max-content;
+    max-width: 950px;
+}
+
+.bread-item  {
+    margin:0px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+/* .bread-item:not(:last-child)    {
+    margin-right: 22px;
+} */
+
+.bread-item:not(:first-child)::before {
+    content:url(../img/decorative/bread.svg);
+    margin-right:6px;
+}
+
+.bread-item-lnk  {
+    color:var(--basic-white);
+}
+
                     /*Catalog*/
 
+.catalog-list-section   {
+    margin:0 27px 0 27px;
+}
+
+.catalog-header {
+    margin: 0px;
+    padding:0px;
+    font-size: 35px;
+    line-height: 41px;
+}
 
 .catalog-list   {
     padding:0px;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 0px auto;
     display: flex;
     flex-wrap: wrap;
     width:1146px;
@@ -615,6 +665,7 @@
     text-align: center;
     margin-right:26px;
     position: relative;
+    margin-bottom:40px;
     
 }
 .catalog-item:nth-child(4n) {
@@ -675,44 +726,18 @@
     color:var(--basic-white);
 }
 
-.bread-list {
-    display:flex;
-    flex-wrap: wrap;
-    gap:8px;
-    margin:0px;
+ 
+
+                            /* PAGES */
+
+
+.pages-list {
+    margin: 0px;
     padding: 0px;
-    margin-left: 27px;
-    margin-top: -22px;
-    position: relative;
-    z-index: 7;
-    outline: pink 2px solid;
-    width:max-content;
-    max-width: 950px;
-}
-
-.bread-item  {
-    margin:0px;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-}
-
-/* .bread-item:not(:last-child)    {
-    margin-right: 22px;
-} */
-
-.bread-item:not(:first-child)::before {
-    content:url(../img/decorative/bread.svg);
-    margin-right:6px;
-}
-
-.bread-item-lnk  {
-    color:var(--basic-white);
-}
-
-.main-header {
-    font-size: 35px;
-    line-height: 41px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    outline:white 3px solid;
 }
 
 .pages-lnk  {
@@ -730,6 +755,43 @@
     align-items: center;
     justify-content: center;
 }
+
+.pages-list::after    {
+    content:url(../img/decorative/arrow-small.svg);
+    position: relative;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.pages-list::before    {
+    content:url(../img/decorative/arrow-small.svg);
+    transform: rotate(180deg);
+    position: relative;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pages-list.first-page::before    {
+    content:url(../img/decorative/arrow-small.svg);
+    transform: rotate(180deg);
+    opacity:0.2;
+    margin-right: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pages-lnk.active-page  {
+    color:  var(--basic-black);
+    box-shadow:inset 0px 0px 0px 16px var(--basic-white);
+}
+
 .pages-lnk:hover:not(.active-page)  {
     color:  var(--basic-white);
     box-shadow:inset 0px 0px 0px 16px var(--transparent-elements-fill);
@@ -739,13 +801,20 @@
     box-shadow:inset 0px 0px 0px 16px var(--basic-white);
 }
 
+.catalog-divider    {
+    height: 1px;
+    background-color: var(--basic-white);
+    margin-top: 30px;
+    opacity:0.2;
+}
+
                     /*Features*/
 
 .main-feature-section   {
     margin:0px;
     padding:0px;
     box-sizing: border-box;
-    margin: 40px auto 0 auto;
+    margin: 0 auto 0 auto;
     width: 1146px;
     height: 306px;
     color:var(--basic-black);
