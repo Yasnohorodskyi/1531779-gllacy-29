@@ -1116,7 +1116,7 @@ outline: 2px solid red;
                     /*Footer*/
 
 .page-footer    {
-    margin:36px auto 0px auto;    
+    margin:18px auto 0px auto;    
     width:1146px;
     height:103px;
     outline: 3px solid blue;
@@ -1133,7 +1133,7 @@ outline: 2px solid red;
     padding:0px;
     display:flex;
     gap:12px;
-    margin:0px;
+    margin:18px 0px 0px 0px;
 }
 
 .footer-social-img  {
@@ -1151,7 +1151,7 @@ outline: 2px solid red;
 
 .footer-docs-list   {
     padding: 0px;
-    margin: 0px auto;
+    margin: 18px auto;
     display: grid;
     grid-template-columns: max-content max-content;
     grid-template-rows: max-content max-content;
@@ -1192,7 +1192,6 @@ outline: 2px solid red;
 
 .footer-made-wrapper    {
     outline: 3px solid navy;
-    margin-top:-18px;
 }
 
 .footer-made-name,
