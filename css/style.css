@@ -1,8 +1,9 @@
 :root  {
     /*Basic Colors*/
 
-    --basic-white:#FFFFFF; /*instagram vector*/
+    --basic-white:#FFFFFF; 
     --basic-black:#323232;
+    --basic-bg:#E5E5E5;
 
     /*Menu colors*/
 
@@ -83,7 +84,13 @@
     font-style: normal;
     font-weight: bold;
     color:  var(--basic-white);
-    background-color: var(--main-page-first);
+    background-color: var(--basic-bg);
+}
+
+.body-wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    background-color:var(--main-page-first);
 }
 
 .list-style-none   {
@@ -105,6 +112,10 @@
 .page-header    {
     width:1200px;
     margin:0 auto;
+}
+
+.header-wrapper {
+    margin:auto 27px;
 }
 
 .header-nav {
@@ -188,8 +199,8 @@
     flex-wrap: wrap;
     outline: 1px solid yellow;
     margin: 0px;
-    padding: 0px;
-    margin-right:27px;
+    padding: 0px;/* 
+    margin-right:27px; */
 }
 
 .sec-nav-list li {
@@ -310,7 +321,6 @@ outline: 2px solid red;
     z-index:6;
     outline: 2px solid white;
     margin-top:2px;
-    margin-right:27px;
     padding:0px;
     display: flex;
     justify-content: flex-end;
@@ -345,6 +355,10 @@ outline: 2px solid red;
 
                      /*Main banner*/
 
+.banner-section {
+    width:1146px;
+    margin:0 auto;
+}
 
 .banner-list    {
     outline:  2px solid yellowgreen;
@@ -562,7 +576,8 @@ outline: 2px solid red;
     display: grid;
     grid-template-columns:1fr 1fr;
     grid-gap:26px;
-    margin:0px 27px;
+    width:1146px;
+    margin:0 auto;
     margin-top:-69px;
     outline:2px solid blueviolet;
 }
@@ -608,7 +623,6 @@ outline: 2px solid red;
     gap:8px;
     margin:0px;
     padding: 0px;
-    margin-left: 27px;
     margin-top: -22px;
     position: relative;
     z-index: 7;
@@ -639,8 +653,14 @@ outline: 2px solid red;
 
                     /*Catalog*/
 
+.page-main.catalog  {
+    width:1146px;
+    margin:0 auto;
+}
+
 .catalog-list-section   {
-    margin:0 27px 0 27px;
+    width:1146px;
+    margin:0 auto;
 }
 
 .catalog-header {
@@ -655,7 +675,6 @@ outline: 2px solid red;
     margin: 40px auto 0px auto;
     display: flex;
     flex-wrap: wrap;
-    width:1146px;
 
 }
 
@@ -1098,14 +1117,12 @@ outline: 2px solid red;
 
 .page-footer    {
     margin:36px auto 0px auto;    
-    width: 1200px;
+    width:1146px;
     height:103px;
     outline: 3px solid blue;
 }
 
 .footer-wrapper    {
-    margin-right: 27px;
-    margin-left: 29px;
     display: grid;
     grid-template-columns: max-content 1fr max-content;
 }
