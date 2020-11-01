@@ -887,6 +887,7 @@ line-height: 15px;
 
 .catalog-item-img   {
     margin:0px;
+    margin-top:6px;
     width:267px;
     height:267px;
     box-sizing: border-box;
@@ -897,6 +898,9 @@ line-height: 15px;
 .catalog-item.hit::before   {
     content:url(../img/decorative/hit.svg);
     position: absolute;
+    z-index: 10;
+    top:6px;
+    left:13px;
     width:61px;
     height:61px;
     border-radius:50%;
