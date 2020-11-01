@@ -879,7 +879,6 @@ line-height: 15px;
     text-align: center;
     margin-right:26px;
     position: relative;
-    margin-bottom:40px;
     
 }
 .catalog-item:nth-child(4n) {
@@ -938,6 +937,31 @@ line-height: 15px;
     text-align: center;
     /* or 137% */
     color:var(--basic-white);
+}
+
+.catalog-item-wrapper   {
+    position: relative;
+    width:293px;
+    height: 402px; 
+    border-radius: 4px;
+}
+
+.catalog-item-wrapper:hover {
+    background-color:var(--transparent-elements-fill);
+}
+
+.catalog-button {
+    display:none;
+    width:200px;
+    height:44px;
+    border-radius: 50px;
+    margin-top:14px;
+    margin-left:auto;
+    margin-right: auto;
+    
+}
+.catalog-item-wrapper:hover .catalog-button {
+    display: flex;
 }
 
  
@@ -1027,7 +1051,7 @@ line-height: 15px;
     margin:0px;
     padding:0px;
     box-sizing: border-box;
-    margin: 0 auto 0 auto;
+    margin: -38px auto 0 auto;
     width: 1146px;
     height: 306px;
     color:var(--basic-black);
