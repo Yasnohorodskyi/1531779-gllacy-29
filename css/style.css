@@ -25,6 +25,7 @@
     --form-border:#D3D3D2;
     --form-window-bg:#F8F7F4;
     --form-feedback--bg:#F9F9F9;
+    --feedback-cross-color:#231F20;
     
     /*Link colors*/
 
@@ -314,6 +315,7 @@
     border-radius: 4px;
     box-shadow: 0px 20px 20px var(--main-menu-window-shadow);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -329,6 +331,18 @@
     display:block;
 } 
 
+.login-button-wrapper   {
+    display: flex;
+    gap:20px;
+}
+
+
+.login-dropdown-container a {
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 15px;
+}
 
 .cart,
 .cart-lnk   {
@@ -690,10 +704,25 @@
     height: 43px;
 }
 
+.login-button   {
+    height:44px;
+    width:103px;
+}
+
+.feedback-send-button   {
+    width:140px;
+    height:44px;
+    align-self: flex-end;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+
 
 .special-button,
 .spam-button,
-.feedback-button {
+.feedback-button,
+.login-button,
+.feedback-send-button {
     box-shadow:  0px 2px 2px var(--button-sec-shadow);
     border-radius: 26px;
     font-size: 18px;
@@ -1270,6 +1299,83 @@
     box-sizing: border-box;
     padding:32px 25px 31px 25px;
 }
+
+.feedback-hidden-wrapper    {
+    position: absolute;
+    z-index: 301;
+    display: none; 
+    right:50%;
+    top:0px;
+    width: 477px;
+    height:441px;
+}
+
+.feedback-hidden-container  {
+    position: absolute;
+    margin: 0px;
+    padding:0px;
+    z-index: 10;
+    width: 477px;
+    height:441px;
+    left:50%;
+    top:50%;
+    background-color: var(--basic-white);
+    color: var(--basic-black);
+    border-radius: 6px;
+    box-shadow: 0px 20px 20px var(--main-menu-window-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-close{
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  width: 18px;
+  height: 17px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+ .feedback-close::before,
+ .feedback-close::after  {
+    content:"";
+    position: absolute;
+    top:8px;
+    right:-2px; 
+    height:2px;
+    width:22px;    
+    background-color: var(--feedback-cross-color);
+} 
+
+.feedback-close::before {
+    transform: rotate(45deg);
+}
+
+.feedback-close::after {
+    transform: rotate(135deg);
+} 
+
+.page-overlay   {
+  position: fixed;
+  display: none;
+  z-index: 300;
+  background-color: var(--basic-black);
+  opacity:0.5;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* .feedback-button:active .feedback-hidden-wrapper,
+.feedback-button:active .page-overlay    {
+    display: block;
+} */
+
 
                     /*Footer*/
 

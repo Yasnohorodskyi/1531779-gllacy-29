@@ -70,10 +70,14 @@
               Вход
               <div class="login-dropdown-wrapper">
                 <div class="login-dropdown-container">
-                    <p>Форма входа</p>
-                    <button class="button feedback-button" type="submit">Войти</button>
+                    <p>Логин</p>
+                    <p>Пароль</p>
+                    <div class="login-button-wrapper"> <button class="button login-button" type="submit">Войти</button>
+                    <span>
                     <a href="blank.html">Забыли пароль?</a>
-                    <a href="blank.html">Новая регистрация</a>
+                    <a href="blank.html"><p>Новая регистрация</p></a>
+                    </span>
+                    </div>
                   </div>
                 </div>
             </li>
@@ -100,6 +104,19 @@
       </div>
     </header>
     <main class="page-main index">
+      <div class="feedback-hidden-wrapper">
+        <div class="feedback-hidden-container">
+          <h2>Мы обязательно вам ответим!</h2>
+          <p>Имя Фамилия</p>
+          <p>e-mail</p>
+          <p>в свободной форме</p>
+          <button class="button feedback-send-button" type="button">Отправить</button>
+          <button class="feedback-close" type="button" aria-label="Закрыть"></button>
+          
+        </div>
+      </div>
+      <div class="page-overlay">
+      </div>
       <section class="banner-section">
         <ul class="banner-list list-style-none">
           <li class="banner-item first">
@@ -238,6 +255,7 @@
 
           <button class="button feedback-button" type="button">Форма обратной связи</button>
         </div>
+        
       </section>
     </main>
     <footer class="page-footer">
