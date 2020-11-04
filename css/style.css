@@ -83,7 +83,6 @@
     --cart-remove-bg:#2C2829;
 }
 .page-body  {
-    outline:2px solid red;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -1177,7 +1176,6 @@ line-height: 15px;
 
 
 .pages-list {
-    outline:2px green solid;
     margin: 0px ;
     margin-right:14px;
     padding: 0px;
