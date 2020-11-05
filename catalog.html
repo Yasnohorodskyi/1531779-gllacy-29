@@ -18,14 +18,34 @@
             <img class="nav-logo-img" src="img/logo/logo.svg" width="154" height="64" alt="Логотип Глейси">
           </a>
           <ul class="main-nav-list list-style-none">
-            <li class="main-nav-item nav-catalog-info"><a class="main-nav-lnk catalog active-page">Каталог</a>
-              <!--  <ul>
-                <li><a href="blank.html"><b>Новинки</b></a></li>
-                <li><a href="catalog.html">Сливочное</a></li>
-                <li><a href="blank.html">Щербеты</a></li>
-                <li><a href="blank.html">Фруктовый лед</a></li>
-                <li><a href="blank.html">Мелорин</a></li>
-              </ul> -->
+            <li class="main-nav-item "><a class="main-nav-lnk catalog" href="catalog.html">Каталог</a>
+              <div class="main-nav-dropdown-wrapper">
+                <div class="main-nav-dropdown-container">
+                  <ul class="main-nav-dropdown-list list-style-none">
+                    <li class="dropdown-list-item">
+                      <div class="dropdown-lnk-wrapper"><a class="dropdown-list-lnk" href="blank.html">
+                          Новинки</a> </div>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <div class="dropdown-lnk-wrapper"><a class="dropdown-list-lnk active-page" href="catalog.html">
+                          Сливочное</a> </div>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <div class="dropdown-lnk-wrapper"><a class="dropdown-list-lnk" href="blank.html">
+                          Щербеты</a> </div>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <div class="dropdown-lnk-wrapper"><a class="dropdown-list-lnk" href="blank.html">
+                          Фруктовый лед</a></div>
+                      </a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <div class="dropdown-lnk-wrapper"><a class="dropdown-list-lnk" href="blank.html">
+                          Мелорин</a> </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
             <li class="main-nav-item nav-pay-info"><a class="main-nav-lnk pay" href="blank.html">Доставка и оплата</a>
             </li>
@@ -41,7 +61,12 @@
               </svg>
               <div class="search-dropdown-wrapper">
                 <div class="search-dropdown-container">
-                  <p>форма поиска</p>
+                  <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+                    <label class="search-label" for="search-input"><span class="visually-hidden">Поиск по
+                        сайту</span></label>
+                    <input id="search-input" class="input search-input" name="search" size="30" type="text"
+                      placeholder="Крем-брюле" />
+                  </form>
                 </div>
               </div>
             </li>
@@ -55,16 +80,20 @@
               Вход
               <div class="login-dropdown-wrapper">
                 <div class="login-dropdown-container">
-                  <p>Логин</p>
-                  <p>Пароль</p>
-                  <div class="login-button-wrapper"> <button class="button login-button" type="submit">Войти</button>
-                    <span>
-                      <a href="blank.html">Забыли пароль?</a>
-                      <a href="blank.html">
-                        <p>Новая регистрация</p>
-                      </a>
-                    </span>
-                  </div>
+                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                    <label class="login-label" for="login-input"><span class="visually-hidden">Логин</span></label>
+                    <input id="login-input" class="input login-input" name="login" type="text"
+                      placeholder="email@example.com" />
+                    <label class="pass-label" for="pass-input"><span class="visually-hidden">Пароль</span></label>
+                    <input id="pass-input" class="input pass-input" name="pass" type="text" placeholder="......" />
+                    <div class="login-button-wrapper"> <button class="button login-button" type="submit">Войти</button>
+                  </form>
+                  <span>
+                    <a class="login-lnk" href="blank.html">Забыли пароль?</a>
+                    <a class="login-lnk" href="blank.html">
+                      <p>Новая регистрация</p>
+                    </a>
+                  </span>
                 </div>
               </div>
             </li>
@@ -131,7 +160,7 @@
         </ul>
       </div>
       <div class="header-wrapper">
-      <h1 class="catalog-header">Сливочное мороженое</h1>
+        <h1 class="catalog-header">Сливочное мороженое</h1>
       </div>
       <section class="filter-section">
         <h2>Фильтр товаров</h2>
@@ -150,28 +179,6 @@
               </div>
               <a class="button catalog-button" href="blank.html">Быстрый просмотр</a>
 
-            </div>
-          </li>
-          <li class="catalog-item">
-            <div class="catalog-item-wrapper">
-              <img class="catalog-item-img" src="img/catalog/coffee-choko.jpg" width="267" height="267"
-                alt="Сливочно-кофейное с кусочками шоколада">
-              <p class="catalog-item-price">380 &#8381<span>/кг</span></p>
-              <div class="catalog-name-wrapper">
-                <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочно-кофейное с кусочками шоколада</a>
-              </div>
-              <a class="button catalog-button" href="blank.html">Быстрый просмотр</a>
-            </div>
-          </li>
-          <li class="catalog-item">
-            <div class="catalog-item-wrapper">
-              <img class="catalog-item-img" src="img/catalog/coffee-choko.jpg" width="267" height="267"
-                alt="Сливочно-кофейное с кусочками шоколада">
-              <p class="catalog-item-price">380 &#8381<span>/кг</span></p>
-              <div class="catalog-name-wrapper">
-                <a class="catalog-item-name lnk-no-bg" href="blank.html">Сливочно-кофейное с кусочками шоколада</a>
-              </div>
-              <a class="button catalog-button" href="blank.html">Быстрый просмотр</a>
             </div>
           </li>
           <li class="catalog-item">

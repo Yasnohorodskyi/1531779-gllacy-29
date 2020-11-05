@@ -96,20 +96,39 @@
     background-color:var(--main-page-first);
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
 .list-style-none   {
     list-style: none;
 }
 
 .articles-new-name:hover,
 .map-contacts-tel:hover,
+.login-lnk:hover,
 .articles-new-name:focus,
-.map-contacts-tel:focus{
+.map-contacts-tel:focus,
+.login-lnk:focus,
+.articles-new-name:active,
+.map-contacts-tel:active,
+.login-lnk:active{
     color:var(--link-whitebg-hover-press);
     text-decoration-color: var(--link-whitebg-hover-press-decor);
     
 }
 .lnk-no-bg:hover,
-.lnk-no-bg:focus {
+.lnk-no-bg:focus,
+.lnk-no-bg:active{
     color:var(--link-nobg-hover-press);
     text-decoration-color: var(--link-nobg-hover-press-decor);
 }
@@ -280,6 +299,24 @@
     display:block;
 }
 
+.input {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 15px;
+    
+    height:44px;
+    border: 1px solid var(--form-border);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.search-input  {
+    width:311px;
+}
+
 
 .login  {
     width: max-content;
@@ -298,6 +335,8 @@
 
 .login-dropdown-wrapper  {
     position: absolute;
+    margin:0px;
+    padding: 0px;
     display: none; 
     right:0px;
     top:32px;
@@ -319,13 +358,14 @@
     box-shadow: 0px 20px 20px var(--main-menu-window-shadow);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
 }
 
 .login-dropdown-container a {
     color:var(--basic-black);
+    text-decoration-color: var(--main-menu-window-separator);
 }
 
 .login:hover .login-dropdown-wrapper,
@@ -335,6 +375,8 @@
 } 
 
 .login-button-wrapper   {
+    
+    margin-top: 20px;
     display: flex;
     gap:20px;
 }
@@ -345,6 +387,21 @@ font-style: normal;
 font-weight: normal;
 font-size: 13px;
 line-height: 15px;
+}
+
+.login-form {
+    margin:0px;
+    margin-top: 20px;
+    margin-left: 19px;
+}
+
+.login-input    {
+    width:241px;
+}
+
+.pass-input {
+    margin-top: 20px;
+    width:241px;
 }
 
 .cart,
@@ -864,8 +921,9 @@ line-height: 15px;
     width:140px;
     height:44px;
     align-self: flex-end;
-    margin-right: 25px;
     margin-top: 25px;
+    
+    margin-right: 24px;
 }
 
 .checkout-button    {
@@ -989,7 +1047,7 @@ line-height: 15px;
     padding: 0px;
     margin-top: -22px;
     position: relative;
-    z-index: 7;
+    z-index: 5;
     width:max-content;
     max-width: 950px;
 }
@@ -1246,7 +1304,6 @@ line-height: 15px;
 }
 
  .catalog-divider    {
-     outline:2px green solid;
     height: 1px;
     width:1146px;
     background-color: var(--basic-white);
@@ -1390,6 +1447,15 @@ line-height: 15px;
     grid-gap:26px;
 }
 
+.spam-form  {
+    display:flex;
+    align-items: flex-start;
+}
+
+.email-input    {
+    width:368px;
+    margin-right: 10px;
+}
 
 
 
@@ -1456,8 +1522,8 @@ line-height: 15px;
     background-color: white;
     margin:5px 6px 5px 6px;
     border-radius: 16px;
-    width:548px;
-    height:210px;
+    width:548px; 
+    height:210px; 
     display: flex;
     flex-wrap: wrap;
 }
@@ -1561,8 +1627,43 @@ line-height: 15px;
     box-shadow: 0px 20px 20px var(--main-menu-window-shadow);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+.feedback-hidden-container h2   {
+    margin:0px;
+    padding:0px;
+    margin-left: 24px;
+    margin-top:20px;
+    margin-bottom:26px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.feedback-form  {
+    margin:0px;
+    margin-top:0px;
+    display:flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+.name-input{
+    width:267px;
+    margin-bottom: 20px;
+}
+
+.feedback-email {
+    width:267px;    
+    margin-bottom: 20px;
+}
+
+.feedback-text  {
+    width:428px;
+    height:154px;
 }
 
 .feedback-close{
