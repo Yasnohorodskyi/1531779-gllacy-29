@@ -1092,12 +1092,263 @@ line-height: 15px;
 }
 
 .filter-section {
-    width:1146;
+    outline: 2px blue solid;
+    width:869px;
     margin-left: 14px;
     margin-right: 14px;
 }
 
+.filter-input   {
+    font-family: Roboto;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    background-color: var(--transparent-elements-fill);
+    border-radius:20px;
+    height:36px;
+    outline: none;
+    border:none;
+    box-sizing: border-box; 
+    color:var(--basic-white);
+}
 
+.filter-select-sort:hover {
+    color:var(--basic-black);
+}
+
+.filter-select-sort:active,
+.filter-select-sort:focus {
+    background-color: var(--basic-white);
+    color:var(--basic-black);
+}
+
+
+.filter-select-sort { 
+    padding-left:16px;
+    width: 196px;
+    appearance: none;
+    position: relative;   
+    z-index: 9;
+    
+}
+
+.filter-label   {
+    outline: 2px red solid;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.filter-label p {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;  
+    margin-bottom: 7px;
+    margin-left:16px;
+}
+
+
+.filter-select-arrow    {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    right:14px;
+    top:36px;
+    cursor: pointer;
+}
+
+.filter-select-sort:hover+.filter-select-arrow,
+.filter-select-sort:active+.filter-select-arrow,
+.filter-select-sort:focus+.filter-select-arrow    {
+    fill:var(--basic-black);
+}
+
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter-element-wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.filter-element-wrapper:nth-child(3) p  {
+    padding:0px;
+    margin:0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 7px;
+    margin-left: 16px;
+}
+
+.fat-filter-wrapper {
+    width:425px;
+    padding-top: 10px;
+    padding-left: 14px;
+    display: flex;
+    align-content: center;
+}
+
+.fat-filter-input   {
+    appearance: none;
+}
+
+.fat-filter-label   {
+    height:21px;
+    margin-right:19px;
+    display: flex;
+    align-content: center;
+}
+
+.fat-filter-input+.fat-filter-label::before   {
+    content:"";
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    width:21px;
+    height:21px;
+    margin-top:-3px;
+    margin-right:11px;
+    border:3.5px solid var(--transparent-checkbox-common);
+    background: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fat-filter-input:hover+.fat-filter-label::before    {
+    border:3.5px solid var(--basic-white);
+}
+
+.fat-filter-input:disabled+.fat-filter-label::before    {
+    border:3.5px solid var(--transparent-checkbox-inactive);
+}
+
+.fat-filter-input:nth-of-type(1):hover:checked+.fat-filter-label:nth-of-type(1)::after    {
+    content:"";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width:8px;
+    height:8px;
+    top:36.4px;
+    left:20.5px;
+    background-color: var(--basic-white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+ .fat-filter-input:nth-of-type(1):checked+.fat-filter-label:nth-of-type(1)::after {
+    content:"";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width:8px;
+    height:8px;
+    top:36.4px;
+    left:20.5px;
+    background-color: var(--transparent-checkbox-common);
+    border-radius: 50%;
+    cursor: pointer;
+} 
+
+.fat-filter-input:nth-of-type(2):hover:checked+.fat-filter-label:nth-of-type(2)::after    {
+    content:"";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width:8px;
+    height:8px;
+    top:36.4px;
+    left:92.2px;
+    background-color: var(--basic-white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fat-filter-input:nth-of-type(2):checked+.fat-filter-label:nth-of-type(2)::after {
+    content:"";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width:8px;
+    height:8px;
+    top:36.4px;
+    left:92.2px;
+    background-color: var(--transparent-checkbox-common);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fat-filter-input:hover:checked+.fat-filter-label:nth-of-type(3)::after    {
+    content:"";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width:8px;
+    height:8px;
+    top:36.4px;
+    left:195.6px;
+    background-color: var(--basic-white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fat-filter-input:checked+.fat-filter-label:nth-of-type(3)::after {
+    content:"";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width:8px;
+    height:8px;
+    top:36.4px;
+    left:195.6px;
+    background-color: var(--transparent-checkbox-common);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fat-filter-input:hover:checked+.fat-filter-label:nth-of-type(4)::after    {
+    content:"";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width:8px;
+    height:8px;
+    top:36.4px;
+    left:298.9px;
+    background-color: var(--basic-white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fat-filter-input:checked+.fat-filter-label:nth-of-type(4)::after {
+    content:"";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width:8px;
+    height:8px;
+    top:36.4px;
+    left:298.9px;
+    background-color: var(--transparent-checkbox-common);
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 .catalog-header {
     margin: 0px;
@@ -1259,7 +1510,8 @@ line-height: 15px;
 }
 
 .pages-list::after    {
-    content:url(../img/decorative/arrow-small.svg);
+    content:url(../img/decorative/arrow-small.svg);    
+    cursor: pointer;
     position: relative;
     margin-left: 16px;
     display: flex;
@@ -1270,6 +1522,7 @@ line-height: 15px;
 
  .pages-list::before    {
     content:url(../img/decorative/arrow-small.svg);
+    cursor: pointer;
     transform: rotate(180deg);
     position: relative;
     margin-right: 16px;
@@ -1280,10 +1533,21 @@ line-height: 15px;
 
 .pages-list.first-page::before    {
     content:url(../img/decorative/arrow-small.svg);
+    cursor: default;
     transform: rotate(180deg);
     opacity:0.2;
     margin-right: 16px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pages-list.last-page::after    {
+    content:url(../img/decorative/arrow-small.svg);
+    cursor: default;;
+    position: relative;
+    margin-left: 16px;
     display: flex;
     align-items: center;
     justify-content: center;

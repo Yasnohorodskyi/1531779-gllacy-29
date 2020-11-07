@@ -163,8 +163,53 @@
         <h1 class="catalog-header">Сливочное мороженое</h1>
       </div>
       <section class="filter-section">
-        <h2>Фильтр товаров</h2>
-        <button class="filter-button" type="submit">Применить</button>
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <form  class="filter-form">
+        <div class="filter-element-wrapper">
+          <label class="filter-label" for="filter-select-sort">
+            <p>Сортировка:</p>
+          <select id="filter-select-sort" class="filter-select-sort filter-input">
+            <option selected value="по популярности">по популярности</option>
+            <option value="сначала недорогие">сначала недорогие</option>
+            <option value="сначала дорогие">сначала дорогие</option>
+            <option value="по жирности">по жирности</option>
+          </select>
+          <svg class="filter-select-arrow" width="11" height="10" viewBox="0 0 11 10" fill="var(--basic-white)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 10L0 0H11"/>
+          </svg>
+        </label>
+        </div>
+        <div class="filter-element-wrapper">
+          <p>Цена: <span class="filter-low-price">100</span> &#8381 - <span class="filter-high-price">500</span> &#8381</p>
+        </div>
+        <div class="filter-element-wrapper">
+          <p>Жирность:</p>
+          <div class="fat-filter-wrapper filter-input">
+            <input class="fat-filter-input" type="radio" id="0" name="fat" value="0">
+
+            <label class="fat-filter-label" for="0">0%</label>
+
+            <input class="fat-filter-input" type="radio" id="10" name="fat" value="10">
+
+            <label class="fat-filter-label" for="10">до 10%</label>
+
+            <input class="fat-filter-input" type="radio" id="30" name="fat" value="30">
+
+            <label class="fat-filter-label" for="30">до 30%</label>
+
+            <input class="fat-filter-input" type="radio" id="40" name="fat" value="40">
+
+            <label class="fat-filter-label" for="40">выше 30%</label>
+            
+          </div>
+        </div>
+        <div class="filter-element-wrapper">
+          <p>Наполнители:</p>
+        </div>
+        <div class="filter-element-wrapper">          
+          <button class="filter-button" type="submit">Применить</button>
+        </div>
+        </form>
       </section>
       <section class="catalog-list-section catalog-page">
         <ul class="catalog-list list-style-none">
