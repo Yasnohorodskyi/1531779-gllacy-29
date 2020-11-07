@@ -94,9 +94,19 @@
 .body-wrapper{
     width: 1200px;
     margin: 0 auto;
+}
+
+.first-banner {
     background-color:var(--main-page-first);
 }
 
+.second-banner {
+    background-color:var(--main-page-second);
+}
+
+.third-banner {
+    background-color:var(--main-page-third);
+}
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -840,6 +850,14 @@ line-height: 15px;
     border-radius: 50%;
     cursor: pointer;
     margin-right: 8px;
+}
+
+.banner-control-button:hover {
+    background-color: var(--banner-slider-dot-hover);
+}
+
+.banner-control .current {
+    background-color: var(--basic-white);
 }
 
 .banner-img {
