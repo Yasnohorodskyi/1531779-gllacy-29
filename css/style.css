@@ -69,6 +69,7 @@
 
     --catalog-filter-slider-dot-fill:#ABABAB;
     --catalog-priceshadow:rgba(49, 50, 53, 0.5);
+    --filter-bg-price-scale:rgba(248, 247, 244, 0.5);
 
     --spam-name:#5A5A5A;
     --spam-bg-color-red:rgba(254,158,144,1);
@@ -1075,13 +1076,12 @@ line-height: 15px;
 
 
 .filter-section {
-    outline: 2px blue solid;
     width:869px;
     margin-left: 14px;
     margin-right: 14px;
 }
 
-.filter-input   {
+ .filter-input   {
     font-family: Roboto;
     cursor: pointer;
     font-style: normal;
@@ -1095,7 +1095,7 @@ line-height: 15px;
     border:none;
     box-sizing: border-box; 
     color:var(--basic-white);
-}
+} 
 
 .filter-select-sort:hover {
     color:var(--basic-black);
@@ -1118,7 +1118,6 @@ line-height: 15px;
 }
 
 .filter-label   {
-    outline: 2px red solid;
     padding: 0px;
     margin: 0px;
     display: flex;
@@ -1159,16 +1158,24 @@ line-height: 15px;
 .filter-form {
     display: flex;
     flex-wrap: wrap;
-}
-.filter-element-wrapper {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .filter-element-wrapper {
-    margin-bottom: 14px;
+    padding:0px;
+    margin:0px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom:14px;
+    flex-wrap: wrap;
+    border:none;
+}
+
+.filter-element-wrapper:last-child  {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .filter-element-wrapper p {
@@ -1183,13 +1190,54 @@ line-height: 15px;
     margin-left: 16px;
 }
 
-.fat-filter-wrapper {
+
+.filter-price-range {
+    width:218px;
+    position: relative;
+}
+
+.filter-price-scale {
+    height:2px;
+    background: var(--filter-bg-price-scale);
+    margin:18px 21px;
+}
+
+.filter-price-bar   {
+    width:70%;
+    height:2px;
+    background:var(--form-window-bg);
+}
+
+.price-toggle   {
+    position: absolute;
+    top:-9px;
+    box-sizing: border-box;
+    width:20px;
+    height:20px;
+    background-color: var(--catalog-filter-slider-dot-fill);
+    border:8px solid var(--basic-white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* .price-toggle.filter-min-price  {
+    left:11px;
+}
+
+.price-toggle.filter-max-price  {
+    left:134px;
+} */
+
+
+
+ .fat-filter-wrapper {
     width:425px;
     padding-top: 10px;
     padding-left: 14px;
     display: flex;
+    flex-direction: row;
     align-content: center;
-}
+} 
 
 .fat-filter-input   {
     appearance: none;
@@ -1273,146 +1321,7 @@ line-height: 15px;
 }
 
 
-/* 
-.fat-filter-input:hover:checked+.fat-filter-label::after  {
-    content:"";
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    width:8px;
-    height:8px;
-    top:36.4px;
-    left:20.5px;
-    background-color: var(--basic-white);
-    border-radius: 50%;
-    cursor: pointer;
-}
 
-.fat-filter-input:checked+.fat-filter-label::after    {
-    content:"";
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    width:8px;
-    height:8px;
-    top:36.4px;
-    left:20.5px;
-    background-color: var(--basic-white);
-    opacity:0.8;
-    border-radius: 50%;
-    cursor: pointer;
-} */
-/* .fat-filter-input:nth-of-type(1):hover:checked+.fat-filter-label:nth-of-type(1)::after    {
-    content:"";
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    width:8px;
-    height:8px;
-    top:36.4px;
-    left:20.5px;
-    background-color: var(--basic-white);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
- .fat-filter-input:nth-of-type(1):checked+.fat-filter-label:nth-of-type(1)::after {
-    content:"";
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    width:8px;
-    height:8px;
-    top:36.4px;
-    left:20.5px;
-    background-color: var(--transparent-checkbox-common);
-    border-radius: 50%;
-    cursor: pointer;
-} 
-
-.fat-filter-input:nth-of-type(2):hover:checked+.fat-filter-label:nth-of-type(2)::after    {
-    content:"";
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    width:8px;
-    height:8px;
-    top:36.4px;
-    left:92.2px;
-    background-color: var(--basic-white);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.fat-filter-input:nth-of-type(2):checked+.fat-filter-label:nth-of-type(2)::after {
-    content:"";
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    width:8px;
-    height:8px;
-    top:36.4px;
-    left:92.2px;
-    background-color: var(--transparent-checkbox-common);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.fat-filter-input:hover:checked+.fat-filter-label:nth-of-type(3)::after    {
-    content:"";
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    width:8px;
-    height:8px;
-    top:36.4px;
-    left:195.6px;
-    background-color: var(--basic-white);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.fat-filter-input:checked+.fat-filter-label:nth-of-type(3)::after {
-    content:"";
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    width:8px;
-    height:8px;
-    top:36.4px;
-    left:195.6px;
-    background-color: var(--transparent-checkbox-common);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.fat-filter-input:hover:checked+.fat-filter-label:nth-of-type(4)::after    {
-    content:"";
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    width:8px;
-    height:8px;
-    top:36.4px;
-    left:298.9px;
-    background-color: var(--basic-white);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.fat-filter-input:checked+.fat-filter-label:nth-of-type(4)::after {
-    content:"";
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    width:8px;
-    height:8px;
-    top:36.4px;
-    left:298.9px;
-    background-color: var(--transparent-checkbox-common);
-    border-radius: 50%;
-    cursor: pointer;
-} */
 
 .add-filter-wrapper {
     display: flex;
@@ -1447,7 +1356,6 @@ line-height: 15px;
 }
 
 .add-filter-input:checked+.add-filter-label::before    {
-    /* outline: 2px solid red; */
     content:"";
     display: block;
     position: relative;
@@ -1470,6 +1378,8 @@ line-height: 15px;
 .add-filter-input:disabled+.add-filter-label::before   {
     opacity:0.4;
 }
+
+
 
 
                                     /*Catalog*/
