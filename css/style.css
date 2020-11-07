@@ -756,6 +756,7 @@ line-height: 15px;
 .banner-section {
     width:1146px;
     margin:0 auto;
+    position: relative;
 }
 
 .banner-list    {
@@ -768,43 +769,77 @@ line-height: 15px;
     margin:0px;
     padding:0px;
     position: relative;
-    top:-716px;
     height:716px;
     width:716px;  
     margin:auto;
+    display: none;
 }
 
-.banner-item.first::before    {  
-    display: block;
+ .banner-item.first::before    {  
+    display: none;
     content:"";
-    position: relative;
+    position: absolute;
     height:716px;
     width:716px;  
-    background:var(--banner-blur-first);
+    background:var(--basic-white);
     filter: blur(250px);
-    z-index:-1;
-}
+} 
 
-.banner-item.second::before    {  
-    display: block;
+ .banner-item.second::before    {  
+    display: none;
     content:"";
-    position: relative;
+    position: absolute;
     height:716px;
     width:716px;  
     background:var(--banner-blur-second);    
     filter: blur(250px);
-    z-index:-1;
 }
 
 .banner-item.third::before    {  
-    display: block;
+    display: none;
     content:"";
-    position: relative;
+    position: absolute;
     height:716px;
     width:716px;  
     background:var(--banner-blur-third);
     filter: blur(250px);
-    z-index:-1;
+} 
+
+.banner-current {
+    display: block;
+}
+
+.banner-item.banner-current.first::before  {
+    display: block;
+}
+
+.banner-item.banner-current.second::before {
+    display: block;
+}
+
+.banner-item.banner-current.third::before  {
+    display: block;
+}
+
+.banner-control {
+    position: absolute;
+    bottom:125px;
+    left:0px;
+    z-index:100;
+    display: flex;
+   
+}
+
+.banner-control button {
+    padding: 0px;
+    display: block;
+    width:17px;
+    height:17px;
+    background-color: transparent;
+    border: 2px solid var(--basic-white);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 8px;
 }
 
 .banner-img {
@@ -1077,8 +1112,10 @@ line-height: 15px;
 
 .filter-section {
     width:869px;
+    margin-top:29px;
     margin-left: 14px;
     margin-right: 14px;
+    margin-bottom: 62px;
 }
 
  .filter-input   {
@@ -1121,12 +1158,11 @@ line-height: 15px;
     padding: 0px;
     margin: 0px;
     display: flex;
-    position: relative;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-.filter-label p {
+/* .filter-label legend {
     margin: 0px;
     padding: 0px;
     font-family: Roboto;
@@ -1136,7 +1172,7 @@ line-height: 15px;
     line-height: 16px;  
     margin-bottom: 7px;
     margin-left:16px;
-}
+} */
 
 
 .filter-select-arrow    {
@@ -1178,7 +1214,7 @@ line-height: 15px;
     justify-content: flex-end;
 }
 
-.filter-element-wrapper p {
+.filter-element-wrapper legend {
     padding:0px;
     margin:0px;
     font-family: Roboto;
@@ -1220,13 +1256,13 @@ line-height: 15px;
     cursor: pointer;
 }
 
-/* .price-toggle.filter-min-price  {
-    left:11px;
+ .price-toggle.filter-min-price  {
+    left:10%;
 }
 
 .price-toggle.filter-max-price  {
-    left:134px;
-} */
+    left:83%;
+} 
 
 
 
@@ -1356,15 +1392,9 @@ line-height: 15px;
 }
 
 .add-filter-input:checked+.add-filter-label::before    {
-    content:"";
-    display: block;
-    position: relative;
-    box-sizing: border-box;
-    top:0px;
     margin-right: 10px;
     border:none;
     width:24px;
-    height:20px;
     background-image: url("../img/decorative/checkbox.svg");
     cursor: pointer;
 }
