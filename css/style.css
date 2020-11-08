@@ -1298,10 +1298,11 @@ line-height: 15px;
 }
 
 .fat-filter-label   {
-    height:21px;
+    height:22px;
     margin-right:11px;
     display: flex;
     align-content: center;
+    position: relative;
 }
 
 .fat-filter-label::before   {
@@ -1309,11 +1310,11 @@ line-height: 15px;
     display: block;
     position: relative;
     box-sizing: border-box;
-    width:21px;
-    height:21px;
+    width:22px;
+    height:22px;
     margin-top:-3px;
     margin-right:11px;
-    border:3.5px solid var(--basic-white);
+    border:3px solid var(--basic-white);
     opacity:0.8;
     background: none;
     border-radius: 50%;
@@ -1331,32 +1332,16 @@ line-height: 15px;
 .fat-filter-label::after    {
     content:"";
     display: none;
-    position: relative;
+    position: absolute;
     box-sizing: border-box;
     width:8px;
     height:8px;
-    top:3.5px;
-    right:0px;
+    top:4px;
+    left:7px;
     background-color: var(--basic-white);
     opacity:0.8;
     border-radius: 50%;
     cursor: pointer;
-}
-
-.fat-filter-label:nth-of-type(1)::after {
-    right:46px;
-}
-
-.fat-filter-label:nth-of-type(2)::after {
-    right:78px;
-}
-
-.fat-filter-label:nth-of-type(3)::after {
-    right:78px;
-}
-
-.fat-filter-label:nth-of-type(4)::after {
-    right:102px;
 }
 
 .fat-filter-input:checked+.fat-filter-label::after  {
