@@ -1199,9 +1199,9 @@ text-decoration-color: var(--main-menu-window-separator);
 .filter-select-sort { 
     padding-left:16px;
     width: 196px;
-    appearance: none;
     -moz-appearance:none;
     -webkit-appearance:none;
+    appearance: none;
     position: relative;   
     z-index: 9;
     
@@ -1525,7 +1525,7 @@ text-decoration-color: var(--main-menu-window-separator);
     width:61px;
     height:61px;
     border-radius:50%;
-    background-color: #FFFFFF;
+    background-color: var(--basic-white);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -1951,7 +1951,7 @@ text-decoration-color: var(--main-menu-window-separator);
 }
 
 .map-container  {
-    width:1200px;
+    width:100%;
     height:430px;
 }
 
@@ -2018,7 +2018,7 @@ text-decoration-color: var(--main-menu-window-separator);
 .feedback-hidden-wrapper    {
     position: absolute;
     z-index: 301;
-    display: block; 
+    display: none; 
     right:50%;
     top:115px;
     width: 477px;
@@ -2128,7 +2128,7 @@ text-decoration-color: var(--main-menu-window-separator);
 
 .page-overlay   {
   position: fixed;
-  display: block;
+  display: none;
   z-index: 300;
   background-color: var(--basic-black);
   opacity:0.5;

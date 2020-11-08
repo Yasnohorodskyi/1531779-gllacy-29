@@ -18,7 +18,7 @@
             <img class="nav-logo-img" src="img/logo/logo.svg" width="154" height="64" alt="Логотип Глейси">
           </a>
           <ul class="main-nav-list list-style-none">
-            <li class="main-nav-item "><a class="main-nav-lnk catalog" href="catalog.html">Каталог</a>
+            <li class="main-nav-item "><a class="main-nav-lnk catalog" href="blank.html">Каталог</a>
               <div class="main-nav-dropdown-wrapper">
                 <div class="main-nav-dropdown-container">
                   <ul class="main-nav-dropdown-list list-style-none">
@@ -152,7 +152,7 @@
             <a class="bread-item-lnk lnk-no-bg" href="index.html">Главная</a>
           </li>
           <li class="bread-item">
-            <a class="bread-item-lnk lnk-no-bg" href="index.html">Каталог</a>
+            <a class="bread-item-lnk lnk-no-bg" href="blank.html">Каталог</a>
           </li>
           <li class="bread-item">
             Сливочное
@@ -164,15 +164,15 @@
       </div>
       <section class="filter-section">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form class="filter-form">
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="filter-element-wrapper">
             <legend>Сортировка:</legend>
             <label class="filter-label" for="filter-select-sort">
-                <select id="filter-select-sort" class="filter-select-sort filter-input">
-                <option selected value="по популярности">по популярности</option>
-                <option value="сначала недорогие">сначала недорогие</option>
-                <option value="сначала дорогие">сначала дорогие</option>
-                <option value="по жирности">по жирности</option>
+                <select name="sort"  id="filter-select-sort" class="filter-select-sort filter-input">
+                <option selected value="popular">по популярности</option>
+                <option value="cheap-first">сначала недорогие</option>
+                <option value="expensive-first">сначала дорогие</option>
+                <option value="fat">по жирности</option>
               </select>
               <svg class="filter-select-arrow" width="11" height="10" viewBox="0 0 11 10" fill="var(--basic-white)"
                 xmlns="http://www.w3.org/2000/svg">
@@ -183,6 +183,7 @@
           <fieldset class="filter-element-wrapper">
             <legend>Цена:<span class="filter-low-price">100</span> &#8381 - <span class="filter-high-price">500</span>
               &#8381</legend>
+              <label>
             <div class="filter-price-range filter-input">
               <div class="filter-price-range">
                 <div class="filter-price-scale">
@@ -248,7 +249,7 @@
             </div>
           </fieldset>
           <div class="filter-element-wrapper">
-            <button class="filter-button" type="button">Применить</button>
+            <button class="filter-button" type="submit">Применить</button>
           </div>
         </form>
       </section>
