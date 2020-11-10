@@ -6,7 +6,7 @@
   <title>HTML Academy: Глейси</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_min.css">
 </head>
 
 <body class="page-body">
@@ -14,15 +14,15 @@
     <header class="page-header">
       <div class="header-wrapper">
         <nav class="header-nav">
-          <a class="nav-logo" href="index.html">
+          <a class="nav-logo">
             <img class="nav-logo-img" src="img/logo/logo.svg" width="154" height="64" alt="Логотип Глейси">
           </a>
           <ul class="main-nav-list list-style-none">
-            <li class="main-nav-item "><a class="main-nav-lnk catalog" href="blank.html">Каталог</a>
+            <li class="main-nav-item"><a class="main-nav-lnk catalog" href="blank.html">Каталог</a>
               <div class="main-nav-dropdown-wrapper">
                 <div class="main-nav-dropdown-container">
                   <ul class="main-nav-dropdown-list list-style-none">
-                    <li class="dropdown-list-item">
+                    <li class="dropdown-list-item" tabindex="0">
                       <div class="dropdown-lnk-wrapper"><a class="dropdown-list-lnk" href="blank.html">
                           Новинки</a> </div>
                     </li>
@@ -37,7 +37,6 @@
                     <li class="dropdown-list-item">
                       <div class="dropdown-lnk-wrapper"><a class="dropdown-list-lnk" href="blank.html">
                           Фруктовый лед</a></div>
-                      </a>
                     </li>
                     <li class="dropdown-list-item">
                       <div class="dropdown-lnk-wrapper"><a class="dropdown-list-lnk" href="blank.html">
@@ -59,7 +58,12 @@
               </svg>
               <div class="search-dropdown-wrapper">
                 <div class="search-dropdown-container">
-                  <p>форма поиска</p>
+                  <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+                    <label class="search-label" for="search-input"><span class="visually-hidden">Поиск по
+                        сайту</span></label>
+                    <input id="search-input" class="input search-input" name="search" size="30" type="text"
+                      placeholder="Крем-брюле" />
+                  </form>
                 </div>
               </div>
             </li>
@@ -73,16 +77,19 @@
               Вход
               <div class="login-dropdown-wrapper">
                 <div class="login-dropdown-container">
-                  <p>Логин</p>
-                  <p>Пароль</p>
-                  <div class="login-button-wrapper"> <button class="button login-button" type="submit">Войти</button>
-                    <span>
-                      <a href="blank.html">Забыли пароль?</a>
-                      <a href="blank.html">
-                        <p>Новая регистрация</p>
-                      </a>
-                    </span>
-                  </div>
+                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                    <label class="login-label" for="login-input"><span class="visually-hidden">Логин</span></label>
+                    <input id="login-input" class="input login-input" name="login" type="text"
+                      placeholder="email@example.com" />
+                    <label class="pass-label" for="pass-input"><span class="visually-hidden">Пароль</span></label>
+                    <input id="pass-input" class="input pass-input" name="pass" type="text" placeholder="......" />
+                    <div class="login-button-wrapper"><button class="button login-button" type="submit">Войти</button>
+                    </div>
+                  </form>
+                  <span class="login-lnk-wrapper">
+                    <a class="login-lnk" href="blank.html">Забыли пароль?</a>
+                    <a class="login-lnk" href="blank.html">Новая регистрация</a>
+                  </span>
                 </div>
               </div>
             </li>
@@ -103,7 +110,7 @@
           </ul>
         </nav>
         <div class="header-tel">
-          <p class="header-tel-txt">с 10 до 20, ежедневно
+          <p class="header-tel-txt"><span>с 10 до 20, ежедневно</span>
             <a class="header-tel-lnk" href="tel:+78124502525">8 812 450-25-25</a></p>
         </div>
       </div>
@@ -117,19 +124,19 @@
           <ul class="footer-social-list list-style-none">
             <li class="footer-social-item">
               <a class="footer-social-lnk" href="#"><img class="footer-social-img fbk" src="img/social/fb.svg"
-                  width="32" height="32" alt="Facebook"></a>
+                  width="35" height="35" alt="Facebook"></a>
             </li>
             <li class="footer-social-item">
-              <a class="footer-social-lnk" href="#"><img class="footer-social-img vk" src="img/social/vk.svg" width="32"
-                  height="32" alt="Вконтакте"></a>
+              <a class="footer-social-lnk" href="#"><img class="footer-social-img vk" src="img/social/vk.svg" width="35"
+                  height="35" alt="Вконтакте"></a>
             </li>
             <li class="footer-social-item">
               <a class="footer-social-lnk" href="#"><img class="footer-social-img inst" src="img/social/inst.svg"
-                  width="32" height="32" alt="Instagram"></a>
+                  width="35" height="35" alt="Instagram"></a>
             </li>
             <li class="footer-social-item">
               <a class="footer-social-lnk" href="#"><img class="footer-social-img twt" src="img/social/twtr.svg"
-                  width="32" height="32" alt="Twitter"></a>
+                  width="35" height="35" alt="Twitter"></a>
             </li>
           </ul>
         </section>
@@ -176,6 +183,8 @@
   </div>
   <div class="page-overlay">
   </div>
+  <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
+  <script src="js/script_min.js"></script>
 </body>
 
 </html>

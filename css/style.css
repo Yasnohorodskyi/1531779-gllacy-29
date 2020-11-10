@@ -390,10 +390,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-
-.login-lnk-wrapper p {
-    margin:0;
+    position: relative;
+    min-height:43px;
+    top:-45px;
+    margin-left:127px;
 }
 
 .login-dropdown-container a {
@@ -1225,28 +1225,6 @@ text-decoration-color: var(--main-menu-window-separator);
     z-index: 9;
     
 }
-
-/* .filter-label   {
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    align-content: flex-end;
-    flex-direction: column;
-    flex-wrap: wrap;
-} */
-
-/* .filter-label legend {
-    margin: 0px;
-    padding: 0px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;  
-    margin-bottom: 7px;
-    margin-left:16px;
-} */
-
 
 .filter-select-arrow    {
     display: block;
