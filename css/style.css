@@ -1185,7 +1185,7 @@ text-decoration-color: var(--main-menu-window-separator);
     margin-top:29px;
     margin-left: 14px;
     margin-right: 14px;
-    margin-bottom: 62px;
+    margin-bottom: 65px;
 }
 
  .filter-input   {
@@ -1407,7 +1407,7 @@ text-decoration-color: var(--main-menu-window-separator);
     justify-content: space-between;
     width:711px;
     padding-left: 16px;
-    padding-top: 8px;
+    padding-top: 11px;
 }
 
 .add-filter-input   {
@@ -1605,6 +1605,11 @@ text-decoration-color: var(--main-menu-window-separator);
 }
 
 .catalog-button {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
     display:none;
     position: relative;
     width:200px;
