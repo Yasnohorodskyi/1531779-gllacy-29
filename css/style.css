@@ -801,7 +801,7 @@
   position: absolute;
   height: 716px;
   width: 716px;
-  background: var(--basic-white);
+  background: var(--banner-blur-first);
   filter: blur(250px);
 }
 
